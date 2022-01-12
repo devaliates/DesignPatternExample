@@ -1,11 +1,12 @@
 ﻿using Example.Controllers;
 
 UserController userController = new UserController();
-
-userController.Get(1);
-
 ProductController productController = new ProductController();
 
+
+// Client Requests
+
+userController.Get(1);
 productController.Get(1);
 
 
