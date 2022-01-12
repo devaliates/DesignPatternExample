@@ -1,20 +1,13 @@
-﻿using Example.Entities;
+﻿using Core.Controllers;
+
+using Example.Entities;
 using Example.Repositories;
 
 namespace Example.Controllers;
 
-public class ProductController
+public class ProductController : BaseController<Product>
 {
-    private ProductRepository productRepository;
-
-    public ProductController()
+    public ProductController() : base (new ProductRepository())
     {
-        this.productRepository = new ProductRepository();
-    }
-
-    public Product Get(int id)
-    {
-        Console.WriteLine($"api ye get {id} isteği yapıldı.");
-        return productRepository.Get(id);
     }
 }

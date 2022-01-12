@@ -1,20 +1,13 @@
-﻿using Example.Entities;
+﻿using Core.Controllers;
+
+using Example.Entities;
 using Example.Repositories;
 
 namespace Example.Controllers;
 
-public class UserController
+public class UserController : BaseController<User>
 {
-    private UserRepository userRepository;
-
-    public UserController()
+    public UserController() : base(new UserRepository())
     {
-        this.userRepository = new UserRepository();
-    }
-
-    public User Get(int id)
-    {
-        Console.WriteLine($"api ye get {id} isteği yapıldı.");
-        return userRepository.Get(id);
     }
 }
