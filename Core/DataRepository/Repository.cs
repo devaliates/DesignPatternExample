@@ -1,6 +1,6 @@
 ﻿namespace Core;
 
-public class Repository<T> where T : class
+public class BaseRepository<T> where T : class
 {
     public T Get(int id)
     {
