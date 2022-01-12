@@ -4,6 +4,6 @@ using Example.Entities;
 
 namespace Example.Repositories;
 
-public class ProductRepository : Repository<Product>
+public class ProductRepository : BaseRepository<Product>
 {
 }
